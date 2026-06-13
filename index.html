@@ -53,7 +53,7 @@ tw-story[tags~="theatre-background"] {  /* the tag added in step 2 */
 tw-story[tags~="theatre-background"] {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./images/theatre.jpg) center center / cover no-repeat fixed;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="street-background" color="purple"></tw-tag><tw-tag name="lobby-background" color="blue"></tw-tag><tw-tag name="staff-background" color="blue"></tw-tag><tw-tag name="theatre-background" color="yellow"></tw-tag><tw-passagedata pid="1" name="Landing" tags="" position="100,200" size="100,100">The Blazing Spirit
-By Angus Webb(link:&quot;Angus Webb&quot;)[(goto-url: &#39;https://gustuph.github.io/dw-website/&#39;)]
+By (link:&quot;Angus Webb&quot;)[(goto-url: &#39;https://gustuph.github.io/dw-website/&#39;)]
 &lt;audio src=&quot;./audio/fire.mp3&quot; autoplay loop&gt;&lt;/audio&gt;
 (if:$run is 0) [[[Begin?|First Scene]]]
 (else:)[[[Begin again?|First Scene]]]</tw-passagedata><tw-passagedata pid="2" name="First Scene" tags="street-background" position="400,200" size="100,100">As the fire rages on, a scream pierces the air and a car backfires as it speeds away from the street.
@@ -82,14 +82,13 @@ The lobby is much more modern than the front of the building, but still feels no
 (unless:$street is 4)[[[Two sets of double doors lead back outside|Street]]](else:)[]
 (unless:$staffroom is 4)[[[Next to the snack bar, a door is labelled &#39;STAFF ONLY&#39;|Staff Room]]](else:)
 [[The double doors at the back of the room lead into the theatre|Theatre]]
-]</tw-passagedata><tw-passagedata pid="4" name="Paramedic" tags="" position="300,50" size="100,100">(if:$paramedic is 0)[You approach the man and note he&#39;s dressed in a blue windbreaker and pants, a red tag on their breast with the word &#39;paramedic&#39; written on it.
+]</tw-passagedata><tw-passagedata pid="4" name="Paramedic" tags="" position="300,50" size="100,100">(if:$paramedic is 0)[You approach the man and note he&#39;s dressed in a blue windbreaker and pants, a red tag on his breast with the word &#39;paramedic&#39; written on it.
 He has heavy bags under his eyes, soot stains on his cheeks, and a receding hairline.
 &#39;Can I ask you a few questions?&#39;
 (click: &quot;&#39;Can I ask you a few questions?&#39;&quot;)[He readily tells you about the night.
 &#39;I was driving home after a shift. Roadworks took me off the main road, so I took a shortcut I knew down this way. When I saw the smoke coming from the alleyway, I stopped to take a look. A guy came sprinting out, he got straight in a car a little ways up and they sped off, but I didn&#39;t pay much attention to it. Another two guys came out, one I told to call an ambulance, the other was fully on fire. I grabbed a blanket from the back of my car and tried to smother the flames, but it was already too late. A few more people were coming out at this point, one was a doctor, so she helped out with some of the others. The ambulance showed up, I got in with a couple of people that were pretty bad off. One died on the way there, chest trauma and some severe burns. And then the other one-&#39;
 He stops himself there as he looks at you, eyebrows low in confusion.
-&#39;You were there too. Your hands. Has any sensation returned yet?&#39;
-(set: $paramedic to 1) (set: $friend to 1)
+&#39;You were there too. Your hands. Has any sensation returned yet?&#39;(set: $paramedic to 1) (set: $friend to 1)
 [[Look down|Your hands]]]]\
 (if: $paramedic is 1)[You approach the paramedic.
 &#39;Would you mind retelling me your statement?&#39;
@@ -100,18 +99,18 @@ He stops himself there as he looks at you, eyebrows low in confusion.
 You shake off the itch in your fingers, try not to think about it. The pavement below you is steady enough, the cinema still worn and in need of your investigation.(set:$street to 3)]\
 (else-if:$street is 3)[Your hand twitches to your collarbone, but you keep it from digging in. The sky is getting redder. The building is old and worn.]\
 (else-if:$street is 4)[You can&#39;t bare to stay out here, the heat, it boils your skin, and the urgent need to strip the flesh from your bones and let your sinew and viscera breathe in the hot air no longer needs your participation. If you stay here any longer, it will happen for you. You stumble backwards until you tumble through the alleyway door into the staffroom. [[The heavy door seems to block the heat well enough.|Staff Room]]]\
-(else:)[The first stars in the sky start to become visible in the fading light of day. The red of the sky is dying down, and with it the heat, the discomfort, and the urges. The street is quiet, a gentle wind eases through. The building is still rundown, the architecture still odd.]
+(else:)[The first stars in the sky start to become visible in the fading light of day. The red of the sky is dying down, and with it the heat, the discomfort, and the urges. The street is quiet, a gentle wind eases through. The building is still rundown, the architecture still odd.]\
 (unless:$street is 4)[
 (if:$paramedic is 0)[[[A man leans against a car parked up in front of the cinema|Paramedic]]](else-if:$paramedic is 1)[[[The paramedic is still leaning against his car by the doors|Paramedic]]]
 (if:$sibling is 1)[[[A car that wasn&#39;t here before is waiting across the street|Sibling]]](else-if:$sibling is 2)[[[Melanie stares glassy-eyed out the windshield from inside her car|Sibling]]]
 (unless:$lobby is 4)[[[The doors into the cinema are unlocked|Lobby]]](else:)[The doors into the cinema don&#39;t budge.]
-(if:$alleydoor is 1)[[[The door down the alleyway leads into the staffroom|Staff Room]]]
+(unless:$staffroom is 4)[[[The door down the alleyway leads into the staffroom|Staff Room]]](else:)[The door down the alleyway leads into the staffroom(click-replace:&quot;The door down the alleyway leads into the staffroom&quot;)[Smoke streams from beneath the door and dissipates into the sky. You can&#39;t imagine opening the door will make it any better.]
 (if:$drunk is 1)[[[You hear a guttural retching from the alleyway.|Drunk]]]]]
 (else:)[The sky is dark, but the stars you saw beginning to appear are nowhere to be seen. The paramedic and Mel have seemingly both driven away. The soft breeze that had given the air a faint chill has disappeared, and the atmosphere is still and heavy, like the stuffy environment of the theatre.
 (unless:$lobby is 4)[[[The doors into the cinema are unlocked|Lobby]]](else:)[The doors into the cinema don&#39;t budge.]
 (unless:$staffroom is 4)[[[The door down the alleyway leads into the staffroom|Staff Room]]](else:)[The door down the alleyway leads into the staffroom(click-replace:&quot;The door down the alleyway leads into the staffroom&quot;)[Smoke streams from beneath the door and dissipates into the sky. You can&#39;t imagine opening the door will make it any better.]]]</tw-passagedata><tw-passagedata pid="6" name="Ticket Taker" tags="" position="550,350" size="100,100">(if:$tickettaker is 0)[A pimply young man is fussing with his collar and fiddling with his buttons when you approach him at his ticket-taking podium. He tries to smile brightly and stand up straight when he sees you, but the break in his voice as he introduces himself as Dan makes him wince and slump.
 &#39;Can I ask you a few questions?&#39;
-(click:&quot;&#39;Can I ask you a few questions&#39;&quot;)[He&#39;s a little nervous as he walks himself back through the other night.
+(click:&quot;&#39;Can I ask you a few questions?&#39;&quot;)[He&#39;s a little nervous as he walks himself back through the other night.
 &#39;It was only my fourth shift. I think I was doing okay. Lex had started to ease of on the teasing, and Anna wasn&#39;t fretting about me as much anymore. I was working the podium again. The last movie was pretty empty, just a couple that went in together, I think the girl was mad at the guy, and then a group of three, all women.&#39;
 He looks up at you and he tilts his head a little.
 &#39;Wait, were you-&#39;
