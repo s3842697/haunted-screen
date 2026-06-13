@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<!-- saved from url=(0094)file:///C:/Users/Angus/Documents/Twine/Scratch/proof-532e7344-f394-48c0-b408-6339c3d05ac9.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Hauntings
+</title>
+
+<style>
+body
+{
+	font: 10pt Cousine, monospace;
+	margin: 2em;
+}
+
+h1
+{
+	font-size: 14pt;
+	text-align: center;
+	margin-bottom: 2em;
+}
+
+tw-storydata
+{
+	display: block !important;
+}
+
+tw-passagedata
+{
+	display: block !important;
+	line-height: 200%;
+	margin-bottom: 2em;
+	white-space: pre-wrap;
+}
+
+tw-passagedata + tw-passagedata
+{
+	border-top: 1pt dashed black;
+	padding-top: 2em;
+}
+
+tw-passagedata:before
+{
+	content: attr(name);
+	display: block;
+	font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Hauntings
+</h1>
+<tw-storydata name="Hauntings" startnode="1" creator="Twine" creator-version="2.12.0" format="Harlowe" format-version="3.3.9" ifid="9EF3ED78-85E6-49BD-A3DE-25EAA45B3181" options="" tags="" zoom="1" hidden=""><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-link, tw-link:link, tw-link:visited, tw-link.visited, .enchantment-link {
+  color: #AD0E0E;
+  text-decoration: underline;
+}
+tw-link:focus, tw-link:hover, tw-link:active, tw-link.visited:hover, .enchantment-link:hover {
+  color: #870909;
+  text-decoration: none;
+}
+
+tw-story[tags~="street-background"] {  /* the tag added in step 2 */
+  background-image: url(./images/cinema.jpeg);  /* the image added in step 1 */
+  background-size: cover;  /* cover the whole element */
+  background-repeat: no-repeat;  /* do not repeat the background image */
+}
+tw-story[tags~="street-background"] {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./images/cinema.jpeg) center center / cover no-repeat fixed;
+}
+
+tw-story[tags~="lobby-background"] {  /* the tag added in step 2 */
+  background-image: url(./images/lobby.jpg);  /* the image added in step 1 */
+  background-size: cover;  /* cover the whole element */
+  background-repeat: no-repeat;  /* do not repeat the background image */
+}
+tw-story[tags~="lobby-background"] {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./images/lobby.jpg) center center / cover no-repeat fixed;
+}
+
+tw-story[tags~="staff-background"] {  /* the tag added in step 2 */
+  background-image: url(./images/staffroom.jpg);  /* the image added in step 1 */
+  background-size: cover;  /* cover the whole element */
+  background-repeat: no-repeat;  /* do not repeat the background image */
+}
+tw-story[tags~="staff-background"] {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./images/staffroom.jpg) center center / cover no-repeat fixed;
+}
+
+tw-story[tags~="theatre-background"] {  /* the tag added in step 2 */
+  background-image: url(./images/theatre.jpg);  /* the image added in step 1 */
+  background-size: cover;  /* cover the whole element */
+  background-repeat: no-repeat;  /* do not repeat the background image */
+}
+tw-story[tags~="theatre-background"] {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./images/theatre.jpg) center center / cover no-repeat fixed;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="street-background" color="purple"></tw-tag><tw-tag name="lobby-background" color="blue"></tw-tag><tw-tag name="staff-background" color="blue"></tw-tag><tw-tag name="theatre-background" color="yellow"></tw-tag><tw-passagedata pid="1" name="Landing" tags="" position="100,200" size="100,100">The Blazing Spirits
+By (link:"Angus Webb")[(goto-url: 'https://gustuph.github.io/dw-website/')]
+&lt;audio src="./audio/fire.mp3" autoplay loop&gt;&lt;/audio&gt;
+(if:$run is 0) [[[Begin?|First Scene]]]
+(else:)[[[Begin again?|First Scene]]]</tw-passagedata><tw-passagedata pid="2" name="First Scene" tags="street-background" position="400,200" size="100,100">As the fire rages on, a scream pierces the air and a car backfires as it speeds away from the street.
+You face the entrance to an old cinema, one that long predates many of the other buildings that have populated the area for as long as you can remember.
+4 nights ago, it burnt down.
+[[A man leans against the front passenger door of a car parked up in front of the cinema|Paramedic]]
+
+[[The doors into the cinema are unlocked|Lobby]]
+[[A door down the alleyway leads into the staffroom|Staff Room]]
+</tw-passagedata><tw-passagedata pid="3" name="Lobby" tags="lobby-background" position="425,475" size="100,100">(unless:$friend is 6)[(if:$lobby is 0)[Your pulse quickens in the lobby. It takes a second for you to identify it, but when you do it sticks in your mind, a knowledge that you aren't calm. Just knowing it is enough to set you on edge. What caused it? Are you safe?
+The lobby is much more modern than the front of the building, but still feels nostalgic for a bygone era. Wooden panelling occupies many of the walls, a neon sign sits above every display, and there is only one theatre in the building.(set:$lobby to 1)]\
+(else-if:$lobby is 1)[The lobby is much more modern than the front of the building, but still feels nostalgic for a bygone era. Wooden panelling occupies many of the walls, a neon sign sits above every display, and there is only one theatre in the building.]\
+(else-if:$lobby is 2)[A crack forms in your torso. You feel it splitting you in two at the stomach. An aching, bursting agony as a cleaving tear starts to break you apart. The feeling of your guts about to burst from your body is mirrorred onto the room around you as massive cracks form in the panelling all around you.(set:$lobby to 3)]\
+(else-if:$lobby is 3)[The lobby is groaning and splintering all around you as you move through it, and the pain in your stomach grows. A sense of panic builds in your thoughts.]\
+(else-if:$lobby is 4)[Dust and debris falls from the splintering walls to create a layer on the floors. You curl in on yourself as your stomach tries to do the same. The walls start caving in. The front doors are blocked first. Then the staff room door. You spring toward the theatre door, ignoring the torturous pain as you stretch the splitting skin even further. You barely make it into the theatre before the collapsing room buries you in a tomb of detritus and your own spilling innards. As the door is barred behind you, you hold a hand at your gut, expecting to feel slick viscera, but quickly realize the pain is gone. A thick cough bubbles from your mouth as you try to [[pretend nothing happened.|Theatre]]]\
+(else:)[The movement of the walls has stopped. The gaudy backlit panelling on the walls remains the same, the glass displays of food all neatly lined. A tranquility has fallen over you. An assuredness of mind.]
+(unless:$lobby is 4)[
+(if:$tickettaker is 0)[[[A young man stands behind the podium at the cinema door|Ticket Taker]]]\
+(else-if:$tickettaker is 1)[[[Dan fusses with his shirt collar and hem as he stands behind his podium by the cinema door|Ticket Taker]]]
+(if:$proposee is 1)[[[A woman is chewing her nails as she looks at each option in the snack bar|Proposee]]]\
+(else-if:$proposee is 2)[[[Sally bites at her fingernails as she tries to decide what food to get|Proposee]]]\
+(else-if:$proposee is 3)[Sally has an open bag of maltesers in her hand, a tear in her eye. Maybe better to let her be.]
+[[Two sets of double doors lead back outside|Street]]
+[[Next to the snack bar, a door is labelled 'STAFF ONLY'|Staff Room]]
+[[The double doors at the back of the room lead into the theatre|Theatre]]
+(if:$proposer is 1)[[[You see a figure with deep frown lines leaning back against the snack bar, looking at Sally|Proposer]]]]]
+(else:)[Dan no longer fusses by his podium, and the lobby is uncomfortably still. There;s not even sound filtering in from outside or through the doors into the staffroom. It reminds you of the soundproofed environment of the theatre.
+(unless:$street is 4)[[[Two sets of double doors lead back outside|Street]]](else:)[]
+(unless:$staffroom is 4)[[[Next to the snack bar, a door is labelled 'STAFF ONLY'|Staff Room]]](else:)
+[[The double doors at the back of the room lead into the theatre|Theatre]]
+]</tw-passagedata><tw-passagedata pid="4" name="Paramedic" tags="" position="300,50" size="100,100">(if:$paramedic is 0)[You approach the man and note he's dressed in a blue windbreaker and pants, a red tag on his breast with the word 'paramedic' written on it.
+He has heavy bags under his eyes, soot stains on his cheeks, and a receding hairline.
+'Can I ask you a few questions?'
+(click: "'Can I ask you a few questions?'")[He readily tells you about the night.
+'I was driving home after a shift. Roadworks took me off the main road, so I took a shortcut I knew down this way. When I saw the smoke coming from the alleyway, I stopped to take a look. A guy came sprinting out, he got straight in a car a little ways up and they sped off, but I didn't pay much attention to it. Another two guys came out, one I told to call an ambulance, the other was fully on fire. I grabbed a blanket from the back of my car and tried to smother the flames, but it was already too late. A few more people were coming out at this point, one was a doctor, so she helped out with some of the others. The ambulance showed up, I got in with a couple of people that were pretty bad off. One died on the way there, chest trauma and some severe burns. And then the other one-'
+He stops himself there as he looks at you, eyebrows low in confusion.
+'You were there too. Your hands. Has any sensation returned yet?'(set: $paramedic to 1) (set: $friend to 1)
+[[Look down|Your hands]]]]\
+(if: $paramedic is 1)[You approach the paramedic.
+'Would you mind retelling me your statement?'
+(click:"'Would you mind retelling me your statement?'")['I was driving home after a shift. Roadworks took me off the main road, so I took a shortcut I knew down this way. When I saw the smoke coming from the alleyway, I stopped to take a look. A guy came sprinting out, he got straight in a car a little ways up and they sped off, but I didn't pay much attention to it. Another guy came out, fully on fire. I grabbed a blanked from the back of my car and tried to smother the flames, but it was already too late. A few more people were coming out at this point, one was a doctor, so she helped out with some of the others. The ambulance showed up, I got in with a couple of people that were pretty bad off. One died on the way there, chest trauma and some severe burns. The other person I saw in the ambulance was you.']
+[[Move back|Street]]]</tw-passagedata><tw-passagedata pid="5" name="Street" tags="street-background" position="550,200" size="100,100">(unless:$friend is 6)[(if: $street is 0)[It is sweltering outside. Sweat lines your brow and evaporates off, only for more to form and leave your skin prickled and irritated. The sky is an angry orange-red and seems to press down on you until you feel the weight of it against your shoulders. The building in front of you is old and rundown. The sign is windworn and fading. The architectural style is hard to place. The brickwork bares strange stains. The windows are grimy.(set:$street to 1)]\
+(else-if:$street is 1)[The building in front of you is old and rundown. The sign is windworn and fading. The architectural style is hard to place. The brickwork bares strange stains. The windows are grimy.]\
+(else-if:$street is 2)[It's gotten hotter somehow. Everything is uncomfortable. Your clothes. Your hair. Your skin. A quiet urge inside tells you it all needs to go, it all needs to peel away, get it off, get it off.
+You shake off the itch in your fingers, try not to think about it. The pavement below you is steady enough, the cinema still worn and in need of your investigation.(set:$street to 3)]\
+(else-if:$street is 3)[Your hand twitches to your collarbone, but you keep it from digging in. The sky is getting redder. The building is old and worn.]\
+(else-if:$street is 4)[You can't bare to stay out here, the heat, it boils your skin, and the urgent need to strip the flesh from your bones and let your sinew and viscera breathe in the hot air no longer needs your participation. If you stay here any longer, it will happen for you. You stumble backwards until you tumble through the alleyway door into the staffroom. [[The heavy door seems to block the heat well enough.|Staff Room]]]\
+(else:)[The first stars in the sky start to become visible in the fading light of day. The red of the sky is dying down, and with it the heat, the discomfort, and the urges. The street is quiet, a gentle wind eases through. The building is still rundown, the architecture still odd.]\
+(unless:$street is 4)[
+(if:$paramedic is 0)[[[A man leans against a car parked up in front of the cinema|Paramedic]]](else-if:$paramedic is 1)[[[The paramedic is still leaning against his car by the doors|Paramedic]]]
+(if:$sibling is 1)[[[A car that wasn't here before is waiting across the street|Sibling]]](else-if:$sibling is 2)[[[Melanie stares glassy-eyed out the windshield from inside her car|Sibling]]]
+(unless:$lobby is 4)[[[The doors into the cinema are unlocked|Lobby]]](else:)[The doors into the cinema don't budge.]
+(unless:$staffroom is 4)[[[A door down the alleyway leads into the staffroom|Staff Room]]](else:)[A door down the alleyway leads into the staffroom(click-replace:"The door down the alleyway leads into the staffroom")[Smoke streams from beneath the door and dissipates into the sky. You can't imagine opening the door will make it any better.]]
+(if:$drunk is 1)[[[You hear a guttural retching from the alleyway.|Drunk]]]]]
+(else:)[The sky is dark, but the stars you saw beginning to appear are nowhere to be seen. The paramedic and Mel have seemingly both driven away. The soft breeze that had given the air a faint chill has disappeared, and the atmosphere is still and heavy, like the stuffy environment of the theatre.
+(unless:$lobby is 4)[[[The doors into the cinema are unlocked|Lobby]]](else:)[The doors into the cinema don't budge.]
+(unless:$staffroom is 4)[[[A door down the alleyway leads into the staffroom|Staff Room]]](else:)[A door down the alleyway leads into the staffroom(click-replace:"The door down the alleyway leads into the staffroom")[Smoke streams from beneath the door and dissipates into the sky. You can't imagine opening the door will make it any better.]]]</tw-passagedata><tw-passagedata pid="6" name="Ticket Taker" tags="" position="550,425" size="100,100">(if:$tickettaker is 0)[A pimply young man is fussing with his collar and fiddling with his buttons when you approach him at his ticket-taking podium. He tries to smile brightly and stand up straight when he sees you, but the break in his voice as he introduces himself as Dan makes him wince and slump.
+'Can I ask you a few questions?'
+(click:"'Can I ask you a few questions?'")[He's a little nervous as he walks himself back through the other night.
+'It was only my fourth shift. I think I was doing okay. Lex had started to ease of on the teasing, and Anna wasn't fretting about me as much anymore. I was working the podium again. The last movie was pretty empty, just a couple that went in together, I think the girl was mad at the guy, and then a group of three, all women.'
+He looks up at you and he tilts his head a little.
+'Wait, were you-'
+'Let's just stick to the facts.'
+(click:"'Let's just stick to the facts.'")['Well, once the movie started, I went on break, traded out with Lex. Oh, Lex works the snack bar usually. The break room was quiet when I went in there. Just Kelly, the owner. I came back out at the end of my break, but after a few minutes I noticed the wall across from the podium was sort of turning black at the bottom, and sort of streaking up the wall. I wasn't sure what to do, but then the door burst open and a guy was on fire, and he was screaming. I just ran. My sister, Mel was already waiting out the front, so I got in and she looked freaked by the scream and I didn't know what to say. We just went home.' (set:$sibling to 1)(set:$tickettaker to 1)
+[[Step back|Lobby]]]]]\
+(else-if:$tickettaker is 1)[You walk up to Dan. 
+'Could you walk me through what you saw again?'(click:"'Could you walk me through what you saw again?'")['It was my fourth shift. I was working the podium again. The last movie was pretty empty, just a couple that went in together, the girl was mad at the guy, and then a group of three, including you. I went on break, then a couple minutes after I came out, the wall started to scorch and a guy opened the door screaming and on fire. I ran out to my sister Melanie's car and we left.']
+[[Step back|Lobby]]]
+</tw-passagedata><tw-passagedata pid="7" name="Staff Room" tags="staff-background" position="775,600" size="100,100">(unless:$friend is 6)[(if:$staffroom is 0)[There's a buzzing somewhere in the room, and you feel your teeth grind. That incessant buzzing. Your eyes flit across the space in quick darts. In spite of the way it seems to silence everything else in the room, you can't find it. Your eye twitches as you resolve to ignore it. Push it down and seethe. The sterile environment of the staffroom does little to soothe you. A couple of cirlular tables are manned by uncomfortable-looking chairs. A mug has been left on the counter, not put away, not in the sink to be washed.]\
+(else-if:$staffroom is 1)[Thebuzzing in the room remains, but visually, the staffroom is sterile, verging on looking like a TV set. A couple of cirlular tables are manned by uncomfortable-looking chairs. A mug has been left on the counter, not put away, not in the sink to be washed.]\
+(else-if:$staffroom is 2)[There's a haze in the room as you push the door open, a cloud of smoke that seems to occupy all the space above your head. A spike of fear digs at your ribcage before you can assure yourself the scent isn't fire, but nicotine. Even so, it claws at your lungs, scratching at your throat and cloying at your eyes. It's an aggravating scent.(set:$staffroom to 3)]\
+(else-if:$staffroom is 3)[The stillness of the room annoys you, a slow bubbling in your veins, a rage that sears the back of your eyes. It hurts.]\
+(else-if:$staffroom is 4)[Cigarette smoke quickly fills the room, clouding around your head and filling your vision, your mouth, your lungs. You cough hard, and you keep coughing. You wave an arm through the cloud but it barely moves the air aorund your face. Stumbled steps carry you this way and that around the room until you feel the wall. Hacking, choking breaths come far too slowly for you to breathe freely. You drag yourself along the wall until you find a door, shoving against in until it gives, tumbling through in a daze, emotions dialled back by the nicotine. [[You're finally out|Theatre]]]\
+(else:)[The buzzing that had driven you up the wall previously is absent. In it's place is a gentle hum from the fridge, an occassional bubbling as the kettle regularly boils itself and eases off.]
+(unless:$staffroom is 4)[\
+(if:$security is 1)[[[A slimy looking man is failing to hold in a silent yawn|Security]]](else-if:$security is 2)[[[Gareth's eyes follow you as he fiddles with his security badge|Security]]]
+(if:$worker is 1)[[[A young woman half-sits, half-lays with her head on the table|Worker]]](else-if:$worker is 2)[[[Lex appears to have fallen back to sleep|Worker]]]
+(unless:$lobby is 4)[[[The heavy door at the entrance leads back into the lobby|Lobby]]](else:)[Try the door into the lobby(click-replace:"Try the door into the lobby")[An immediate trickle of rubble immediately puts that idea to bed.]]
+[[A small door in the corner leads into the theatre|Theatre]]
+(unless:$street is 4)[[[A larger door in the far back corner leads into the alleyway beside the theatre|Street]](set:$alleydoor to 1)](else:)[Try the door into the alleyway(click-replace:"Try the door into the alleyway")[The handle is blistering hot, to hot to pull.]]
+(if:$owner is 1)[[The buzzing is louder than ever now, an involuntary sneer growing on your face as you look toward the source|Owner]]]]
+(else:)[The staffroom is noticably different from how you remember it before. The more obvious difference is that it's empty, no Gareth or Lex at separate tables. More subtle, however, is the cleanliness. The room is still visually pristine, like a kitchenette at Ikea, but the smell is wrong. Where it used to smell of heavy cleaning products, it's now oddly more reminiscent of old, long-spoiled oil and stale air that's sat in carpet for far too long. Something you'd much more expect.
+(unless:$lobby is 4)[[[The heavy door at the entrance leads back into the lobby|Lobby]]](else:)[Try the door into the lobby(click-replace:"Try the door into the lobby")[An immediate trickle of rubble immediately puts that idea to bed.]]
+(unless:$street is 4)[[[A larger door in the far back corner leads into the alleyway beside the theatre|Street]]](else:)[Try the door into the alleyway(click-replace:"Try the door into the alleyway")[The handle is blistering hot, too hot to pull.]]
+[[A small door one corner leads into the theatre|Theatre]]]</tw-passagedata><tw-passagedata pid="8" name="Theatre" tags="theatre-background" position="450,700" size="100,100">(unless:$friend is 6)[(if:$theatre is 0)[There's a tear in your eye before you realise anything is wrong. Even then, you don't quite know what's wrong. It's a knowledge that you shouldn't be here. That you're only here because you choose to be. But that can't be right. You're here for justice. So you swipe the tear away and move on, ignoring the hollow feeling in your chest. The door opens onto a pathway down the stairs between the rows of nice enough seats toward the wall with the screen a little too high up.]
+(if:$friend is 1)[[[A woman sits near the front of the theatre off to the left.|Friend]]]\
+(else:)[[[An uneasyness grows as you look at the woman at the front of the theatre|Friend]]]
+(if:$cleaner is 1)[[[An older woman in a jumpsuit and boots stares sadly at the screen|Cleaner]]](if:$cleaner is 2)[Anna stands with a hand on her cart, looking toward the screen]
+[[Double doors lead back out into the lobby|Lobby]]
+[[You can now see the faint markings above the hidden door next to the screen|Staff Room]]]
+(else:)[Anna is gone from where she had been standing. The room feels frozen, like a picture taken long ago.
+[[Only Stella remains in motion in the space.|Friend]]
+]</tw-passagedata><tw-passagedata pid="9" name="Sibling" tags="" position="550,50" size="100,100">(if:$sibling is 1)[A young woman stares glassy eyed out the front windscreen of the car she sits in. She's very still, but her knuckles are a harsh white where she clenches her fists on the steering wheel. When you approach, she seems to jolt into action, winding her window down halfway.
+'Are you Dan's sister?' 
+(click:"'Are you Dan's sister?'")['Yeah, I was here to pick him up, but I got the times way wrong. I didn't have anything better to do, so I just hung out in the car. Are you investigating the fire or something?'
+'I am. Did you see anything from in here?'
+(click:"'I am. Did you see anything from in here?'")['I saw Gareth, the security guard, he came by a few minutes after I parked. He's a bit gross, so I just kinda nodded at him and didn't look his way. There was a pretty big guy in the alleyway around then. He seemed a bit unsteady on his feet, and he headed into the cinema while Gareth was talking to me. Then a few minutes later, after Gareth had gone, there was a shout from the alley. Seemed like whoever was in there was real angry, but I couldn't see them. I think they went into the door to the staffroom when the wind started to pick up. When Dan came sprinting over, I looked over at the doors and Gareth was  stumbling out, along with a guy on fire, so I just booked it.' (set:$sibling to 2)(set:$alleyway to 1)(set:$security to 1)
+[[Move away|Street]]]]]\
+(if:$sibling is 2)[Mel winds her window down as you approach, the glass creaking in bursts as it lowers. 
+'Remind me what you saw?'
+(click:"'Remind me what you saw?'")['I tried to ignore Gareth, the creepy security guard. I saw a big guy stumbling into the cinema behind him. After Gareth had left, there was a yell from the alleyway, but they went into the staffroom when the wind picked up. When Dan came out, I saw Gareth running out too, and I just took off.']
+[[Move away|Street]]]</tw-passagedata><tw-passagedata pid="10" name="Proposee" tags="" position="550,575" size="100,100">(if:$proposee is 1)[She's small and hunched over, moving back and forth in front of the glass.
+'Could I ask you a few questions about the other night?'(click:"'Could I ask you a few questions about the other night?'")[She jumps at your words, and turns to you for a split second before returning to worrying over the glass.
+'Sure, sure. My boyfriend will be here any second if you want to talk to him too. God. I know I should just pick anything, but I just don't know what I want.'
+'What do you remember ma'am?'
+(click:"'What do you remember ma'am?'")['Please, Sally is fine. I was here with Freddy, my boyfriend. He'd been anxious all week, so when he suggested we go out for a movie date, I thought it'd be a good chance to cool him down. But he was still so antsy. I cracked it at him a couple of times. I knew it wouldn't help, but the last thing I wanted was to have the night ruined by his jumpiness. I said some things I didn't mean. Told him to man up. We got into the cinema and sat down. He was bouncing around in his seat, wouldn't hold my hand because of his sweaty palms. Then he saw the smoke and we started running out. When the wall collapsed behind us, I just wanted him to come out with me, but I got dragged out. And then, he was off in that-that...'
+She stops and her whole body shakes. Then she stands up straight and turns back to face you.
+'He went to the hospital, but he should be back any second now. He'll be back.'(set:$proposee to 2)(set:$lobby to 2)(set:$proposer to 1)
+[[Move away|Lobby]]]]]\
+(else-if:$proposee is 2)[Sally is lightly crying as she stands in front of the snack bar.
+'Could you tell me about that night again?'(click:"'Could you tell me about that night again?'")[Freddy was anxious. I said some things I regret. When he saw the smoke, we were the first out of the room, but when the door back into the theatre collapsed, I tried to pull him out with me but he stayed. I got dragged out by somebody. He left in the ambulance, but he'll be back from the hospital any time now, I'm sure.']
+[[Move away|Lobby]]]</tw-passagedata><tw-passagedata pid="11" name="Security" tags="" position="600,825" size="100,100">(if:$security is 1)[The man you approach looks like a caricature of a power-tripping cop. His hair is slicked back, his outfit is pristine, his face is unnatractive and a bristly, unkempt moustache grows over a smarmy grin as he sets eyes on you. You're almost thankful that when he opens his mouth, the neverending buzz in the room drowns out the words his mouth makes in greeting.
+'What did you see on the night of the fire after talking with Mel?'
+(click:"'What did you see on the night of the fire after talking with Mel?'")[His words mercifully carry no voice, but you understand their meaning all the same. //I was checking on her during my rounds, making sure she was comfortable. Once I knew she was okay, I came back inside. Lex was dealing with a customer. He seemed a little unpredictable, but she finished up the transaction as I was on my way over. We both headed into the staffroom and I tried to strike up a conversation, but Lex isn't very talkative. We sat down at different tables. A few minutes later, Anna, the cleaner, came in and started laying into Kelly about something. It started getting heated but Kelly went to take a call in the alleyway and Anna headed back into the theatre before it became something I needed to intervene in. I heard a scream a little after that, so I came rushing out the front to investigate. The guy Lex was serving earlier came out behind me completely on fire. I called an ambulance as a doctor started helping him. Not many people stuck around after that. After a while it was pretty much just me and the girl crying in the street as the ambulance pulled away.//(set:$security to 2)(set:$proposee to 1)
+[[Move away from the guard|Staff Room]]]]\
+(else-if:$security is 2)[Gareth watches you approach while picking at his teeth.
+'Could you remind me what you saw the other night?'
+(click:"'Could you remind me what you saw the other night?'")[//I came inside and Lex was dealing with a guy that looked a little unsteady. When she finished the transaction, we both went into the staffroom. Anna came in and got into a fight with Kelly, but Kelly took a call outside. There was a scream, I ran out to see the guy Lex was dealing with on fire. I called an ambulance. It came and picked up some of the more injured, leaving behind a woman crying in the street.//]
+[[Move away from Gareth's attention.|Staff Room]]]
+</tw-passagedata><tw-passagedata pid="12" name="Proposer" tags="" position="300,475" size="100,100">As you approach, you realise that the figure is blurry, out of focus where he stands. He's melancholic as he watches Sally deliberate over the chocolate section.
+'She used to get me to pick the snacks. Hated having to choose between one or the other.' 
+He sighed and looked over at you, tears disappearing from where they dripped off of his hazy chin.
+'We usually communicate really well with each other. We really listen, you know. But I wanted it to be a surprise when I proposed. I wanted it to be perfect. So, I planned a date night. A stupid old movie we can laugh at, dinner at a nice place, then back home where I'd ask her. Of course, the more I thought about how perfect I wanted it, the more anxious I got. She could tell, but I didn't say anything. After trying and trying to get me to talk about it, she got frustrated. She said I was being a coward. She was right. I've never been a brave guy. Never had it in me.
+'When I noticed the smoke, I grabbed her hand and bolted. Fire was catching on the walls. Then there was this bad creaking sound, and the wall above the door into the cinema just collapsed. Your friend knocked into me as she was stopping, and I looked back as you screamed. I let go of Sally and came back toward you. You weren't hurt, but you were clawing at the rubble. Sally was grabbing at my jacket as I tried to help you. I told her to go. She didn't leave until your friend and one of the workers dragged her away. 
+'I couldn't help you. There was too much rubble, and it burned everytime we touched it. When the roof beams started collapsing, I stood up to try and drag you away, but they fell on me. Everything was heavy and hot. I was fading in and out. I think you pried the beam off of me and put my arm over your shoulder, but I was in agony. By the time you had dragged me out the door, I had completely blacked out. [[I don't think I woke up again.'|Lobbydecision]]
+</tw-passagedata><tw-passagedata pid="13" name="Worker" tags="" position="725,825" size="100,100">Wires lead from her ears into the pockets of her oversized work shirt, half-hidden amongst messy black hair.
+(if:$worker is 1)['Excuse me?'
+(click:"'Excuse me?'")[She doesn't respond.
+You cough loudly and she jolts on the table, head swivelling quickly. 
+'Shit dude, didn't see  you there.' She slowly pulls the headphones out of her ears. 'Did you want something?'
+'What can you tell me about the night of the fire?'
+(click:"'What can you tell me about the night of the fire?'")['Uhh, I was working. Started on the snack bar, then moved onto the ticket podium when Dan went on break. A drunk guy came in, he was real messy. I think h wanted a tissue, but he just kept saying "I'm Andrew Mason, I'm 5 minutes sober." When Gareth came in, I levelled with the guy that I didn't wanna kick him out, but he had to pay up. He did, so I gave him a ticket and he went to the toilet. Gareth tried to hit me up so I just went on break. He followed me, so I plugged my headphones in and pretended to sleep. I might have actually fallen asleep for a little, I dunno. Next thing I know, I heard this scream and I looked up and there was smoke all around the roof. I ran out into the lobby and there was so much fire. A couple people were crouched by the entrance into the theatre and couple of women were just standing there watching them. I just grabbed an arm as I was going by and started dragging them to the door. When I got out there, there was a body on the ground, the drunk guy. That fucked me up a bit. The rest of the night was a bit of a blur.(set:$street to 2)(set:$worker to 2)(set:$drunk to 1)
+[[Step away|Staff Room]]]]]
+(if:$worker is 2)[She seems to sense your approach this time, looking up at you before you say anything.
+'Can you remind me what you remember of the fire?'
+(click:"'Can you remind me what you remember of the fire?'")[While Dan was on break, I served a drunk guy, Andrew Mason, 5 minutes sober. He was messy and I had to talk him through buying a ticket. He went to the toilet and I went to pretend to sleep in the break room to avoid Gareth being gross. Next thing I know, there's a scream and smoke all around. I headed out through the lobby, grabbed somebody that was standing in the lobby on my way out. When I got out there, I saw the drunk guy, dead on the ground. I don't really remember anything else from the night.]
+[[Leave Lex to her music|Staff Room]]]</tw-passagedata><tw-passagedata pid="14" name="Owner" tags="" position="850,825" size="100,100">A woman with lightly greying hair sits at the back of the staffroom. She's breathing heavily, nostrils flared and frown deeply entrenched on her face. The buzzing echoes from her palm, her phone set to silent mode yet still loud and demanding. It makes you fume, much like the woman holding it.
+'He calls me constantly. He does every single thing he can think of to piss me off, and he makes sure to let me know about it while I'm at work.'
+The way she speaks reminds you of rabid conspiracy theorists that just can't convince anybody of the truth they believe so fervently. But there's an element in her voice, a tinge of sadness and pain that makes every word waver, tough to grit out. The phone stops buzzing, and she breaths out a long sigh.
+'He's taking everything from me. All my time, all my energy, all my sanity. My workers hate me, or think I'm incompetent, or both. Anna's grown to hate me. We used to be good friends. And I knew it was important, that I couldn't ignore her forever, but I just needed to get through the divorce, and I'd be able to dedicate all the energy I had to fixing the place up.
+'He called, and I knew I shouldn't answer it, but I also didn't want Anna to yell at me anymore. So, I went out to the alley, and I listened to what he had to say. It wasn't anything I hadn't heard before. It still hurt. I lit up a smoke to take some of my anger off. I let him yell at me, and I just seethed. 
+'I was so sure I snubbed the cigarette. I really thought I did. But then the wind picked up, and I heard things being blown across the alley. I went back into the staffroom and tried to pretend I wasn't crying. I just hurt. The world became a blur. I didn't even feel Anna pulling at me. 
+[['I'm just glad she got out'|Staffroom Decision]]
+</tw-passagedata><tw-passagedata pid="15" name="Cleaner" tags="" position="450,825" size="100,100">(if:$cleaner is 1)[The woman stands next to a cart packed with spray bottles, rolls of wipes, paper towels, and it's own bin. As you approach, her vision doesn't leave the blank screen of the cinema.
+'Could I ask you some questions about the fire?'
+(click:"'Could I ask you some questions about the fire?'")[That night, when I went into the staffroom, I saw Kelly. I've been trying to tell her about the state of the building for a while, but she always brushes me off, tries to tell me she'll get to it. So I went to talk to her again. I told her, the exit sign lights are too dark to see, the fire door in the staffroom doesn't latch properly, this building breaks so many codes. But she didn't want to hear it. She just blew me off. Her phone started ringing and she told me she'd get to it, then went out to the alley to take the call. I got a little heated. So, I went back into the theatre, thought I'd keep an eye out for any troublemakers. God knows Gareth would never actually do any work. When somebody yelled smoke, I headed back into the staffroom. There was smoke coming in beneath the fire door, and Kelly was just sitting in the corner, not moving. I went over to her to try and get her up, but I realised she was crying pretty hard. She wasn't responding to anything I said, didn't care when I pulled at her arm, it was like she was dead weight. There was a scream out in the lobby and I saw Lex wake up and run out. I kept trying to move Kelly, but she just wouldn't budge.'
+Anna's eyes are misty as she looks at the screen, as if seeing a memory projected onto the wall. She clears her throat as she continues on.
+'Eventually, I just ran out through the lobby. There was fire everywhere, the ceiling was starting to come down. I fell down when I got near the door, hit my head pretty hard on the floor. But I managed to get out. A doctor had a look at my head, and after a while I headed home.'(set:$owner to 1)(set:$staffroom to 2)(set:$cleaner to 2)
+[[Step back|Theatre]]]]\
+(else:)[Anna wipes a finger under her eyes as she stands otherwise completely still.
+'Could you run me through the other night again?'
+(click:"'Could you run me through the other night again?'"[I went into the staffroom and saw Kelly, the owner. I tried to talk to her about how many safety codes the building was violating, but she blew me off, taking a call on her phone in the alley. I went into the theatre again. When somebody yelled about smoke, I went back into the staffroom and saw Kelly still in there as smoke came in under the fire door. She didn't respond to anything, and when somebody screamed from the lobby, I had to leave. I fell over on my way out through the lobby, but it wasn't anything too serious.]
+[[Leave Anna|Theatre]]]</tw-passagedata><tw-passagedata pid="16" name="Partner" tags="" position="325,700" size="100,100">The lights along the sides of the room dim and a quiet hum sounds from the back of the room as the projector begins to splash colour against the screen. 
+(if:$condemn &gt; 2)[After a moment of darkness, the screen shows an image in black and white, at first blurry and then refining until a clear image of Ellie appears. You slap a hand over your mouth as a choked sob emerges from you, tears running over your knuckles. 
+'You think you can make up for it by solving your little mystery? You think that makes up for you leaving me behind?' The image grows closer to the screen, voice growing more fervent as she gets more and more personal. [[The screen flickers as Ellie's hand reaches out toward it.|Bad End]]]\
+(else:)[On the screen, you see yourself, young, smiling, and talking to a similarly young and smiling Ellie. On your first date you met up at a cafe near her uni. She was adorable and funny and all you could do was fall in love. It's the greatest luck of your life that she felt the same way. You feel a popcorn bucket shoved gently into your lap as a weight settles into your side, sharing a seat that was definitely meant for one. You instinctually wrap your arm around the familiar shape. You can't bring yourself to look down at what could only be Ellie.[['It's a bit of a sad movie, but I really love it.'|Good End]]]</tw-passagedata><tw-passagedata pid="17" name="Drunk" tags="" position="675,25" size="100,100">As you move into the alleyway, you quickly find the blurry figure leant up against the wall, making horrible wretching noises. Thankfully, the puke quickly disappears from existence as soon as it emerges from his mouth. He swipes a sleeve across his spectral lips and turns to look down toward the alleyway's entrance. It's dark and warm, and his drunkenness seems to seep out of him, amplifying both. You notice a glass bottle in his left hand, nearly full with vodka. He stares down at it for a moment before stumbling a few steps away to lean on the wall above a non-puked segment of ground.
+'You're a mess, Mason.' He says it with a laugh. It's hollow, though. You get the sense he knows that his words don't begin to cover it. He turns to put his back against the brickwork and slides slowly down to the pavement. His eyes never leave the vodka.
+He unscrews the top with a struggled twist and slowly takes a deep swig. He drops it down to his lap and closes his eyes, hair ruffling against the wall.
+And then all at once, he upends the bottle beside him, pouring the spirits out in glugs, down to where it splashes against the cement. It takes long seconds to all spill out until finally, finally, the bottle is empty. 
+He leans forward and pushes his feet down, stumbling further up with each step. It's only now that he seems to notice you. He smiles in a way that might have been charismatic if his lips and chin weren't still wet with his throwup.
+'I head into the cinema after this. A reward for myself. I go into the toilet after I buy a ticket. I don't notice it getting hotter until the leg of my pants is on fire. I freak out, struggle with the door. There's a moment when the flames keep climbing my clothes that I realise the wall is against the alleyway. Against the pool of vodka I poured out.' His smile droops and he shakes his head, another empty laugh falling from him.
+'I finally manage to sprint out and when I fall to the ground, the paramedic covers me in a blanket. I'm gone before he can really do anything. The other doctor still tries to help me though. Tries longer than I probably deserve. It doesn't do anything of course. I end up- well, I end up here. Dead.
+[['Got myself to blame, I suppose.'|Street Decision]]
+</tw-passagedata><tw-passagedata pid="18" name="Friend" tags="" position="325,825" size="100,100"> Her hair is up in a neat bun that swivels slowly as she turns to look at you.
+(if:$friend is 1)[Go sit near her. 
+(click-replace:"Go sit near her.")[[[Not right now. You should leave her alone.|Theatre]]]]\
+(else-if:$friend is 2)[You have some questions about what Freddy told you.
+(click:"You have some questions about what Freddy told you.")[Stella's face seems to brighten as you approach. She reaches out and pushes the seat beside her down from it's upright position in invitation.
+'Hey. How are you doing?' The question is much too familiar. It stings in your throat.
+'You helped bring Sally, one of the patrons out of the building on the night of the fire?'
+'Me and one of the workers, Lex, I think her name was. Do you want to talk about-'
+'And Lex was okay after the fire?'
+Stella sighs when you interrupt her. 'Physically, apart from a little smoke. She was pretty shaken though. Was that all? Can we talk about you now?' The sting returns, and with it comes an uneasy swirl through your stomach. 
+Without answering, you stand, the seat flapping up behind you with a smack against the back. [[You walk away quickly.|Theatre]](set:$friend to 3)(set:$worker to 1)]]\
+(else-if:$friend is 3)[You don't have anything else to say to the woman.[[Turn around.|Theatre]]]
+(else-if:$friend is 4)[Your trepidation rises again at the thought of interacting with this woman more. But she may have information you need.
+(click:"she may have information you need.")[You go and sit down beside Stella again. She goes to speak but you cut her off before she gets the chance.
+'Would you be able to tell me more about the night of the fire?'
+(click:"'Would you be able to tell me more about the night of the fire?'")[She looks at you sadly.
+'We were going to watch a movie. It was Ellie's favourite growing up, just a bad kids movie from her childhood. When she heard they were holding a screening here, she made us come with. We had to get the full experience, she told us.'
+'Just focus on the fire please.'
+(click:"'Just focus on the fire please.'")[Stella sighs again. 'When the couple up the back yelled smoke, we started leaving. I stumbled and Ellie made sure I was following okay. The two of you pushed me ahead to make sure I didn't fall over. When the doorway collapsed, I turned around and it was just you. You screamed and immediately started trying to clear the doorway enough for her to get out, but there was too much. When Lex pulled at the other woman to drag her out of the cinema, I went with her to see if I could help. I tried to help the guy on the ground, but he was already pretty much dead. I checked in on Lex, but she was in shock, staring at the dead guy. The only other person I could really help was the cleaner, Anna. She'd fallen over in her rush to get out, but she was okay.'
+'Thank you, that's all I needed.'(click-replace:"'Thank you, that's all I needed'")[She grabs your arm as you try to get up. She doesn't say anything, but her eyes are pleading as she looks up at you. (set:$friend to 5)(set:$cleaner to 1)[[You shrug her off and move away|Theatre]]]]]]]
+(else-if:$friend is 5)[You don't have any more questions for her right now. [[Turn around|Theatre]]]
+(else:)[You tread on slow, gentle steps toward the seat beside your friend. When you sit down, you both dwell in the silence for a time, looking up at the still blank screen. The soft lighting of the room is soothing and gentle.
+'Can you tell me about Ellie?'
+(click:"'Can you tell me about Ellie?'")[The words surprise you as you speak them, and she looks over at you with a sad smile on her face.
+'She was the best. She was hilarious, and she had such passion for the things she loved. Star Wars and old movies and campy TV shows. She was outgoing around us, but so anxious when it came to other people. She never wanted to make anybody else uncomfortable. She loved you. And she would hate the way you're not letting yourself process this.'
+You nod, tears well and truly falling from your face. She stands and turns to look at you.
+'Take care of yourself.'
+[[It's time to talk to Ellie|Partner]]]]</tw-passagedata><tw-passagedata pid="19" name="Forgive Lobby" tags="" position="250,275" size="100,100">Freddy's pain is written plainly on his face. He reaches into his jacket pocket and pulls out a ring. The golden band is pristine and the diamond set into it is a beautiful cut.
+'You did everything you could to help me. You didn't have to. You aren't a coward, Freddy. You're a person that did their best.'
+He can't look at you, but he gives a grateful nod. He leans down next to his girlfriend and slips the ring into her coat pocket, placing a gentle kiss on her temple and whispering into her ear. One last tear falls from his eye as he fades away. Sally stands up straighter and looks at the space where Freddy was, a small, sad smile growing on her lips before she notices you.
+'I think I've decided what I'm going to order.' (set:$lobby to 5)(set:$friend to 2)(set:$proposee to 3)(set:$proposer to 2)
+[[Leave Sally in peace|Lobby]]</tw-passagedata><tw-passagedata pid="20" name="Condemn Lobby" tags="" position="150,325" size="100,100">'You're right. You aren't brave. You were weak.'
+He reaches into his hand into his jacket and pulls out a golden band, covered in soot and set with a large diamond. He scrunches his eyes shut for a second, and while he isn't looking, it fades away, leaving his palm empty. A noise climbs out of his throat and for a brief moment, Sally turns to look at him. It's only for a moment, though, as she too fades away.(set:$lobby to 4)(set:$friend to 2)(set:$condemn to it+1)(set:$proposer to 2)
+[[The room starts to shake.|Lobby]]</tw-passagedata><tw-passagedata pid="21" name="Condemn Street" tags="" position="800,275" size="100,100">He lets the bottle drop to the ground and you watch as it shatters. You wonder if the alcohol in his body fuelled the fire as it consumed him. 
+'You were drunk and stupid. You have blood on your hands that will stain you forever.'
+He nods, the empty smile on his face changing into something sadder.
+(set:$street to 4)(set:$friend to 4)(set:$condemn to it+1)(set:$drunk to 2)
+[[The heat in the air grows.|Street]]</tw-passagedata><tw-passagedata pid="22" name="Forgive Street" tags="" position="700,325" size="100,100">You move to lean against the wall beside him. He turns so that you're shoulder to shoulder. The sky above is fading from red to blue and black. You reach out a hand and take the empty bottle from him.
+'You died choosing to be sober, trying to make yourself better. You made a drunken mistake, but that doesn't define you. Your decision to do better should.'
+He tips his eyes up to the sky and smiles at the first stars peaking through the light pollution. In a few moments, he disappears. \
+(set:$street to 5)(set:$friend to 4)(set:$drunk to 2)
+[[Leave the alleyway|Street]]</tw-passagedata><tw-passagedata pid="23" name="Condemn Staff Room" tags="" position="800,450" size="100,100">The phone buzzes again and a groan came from her throat, a keening, angry, sad sound. 
+'Seems like you deserve each other.'
+Her eyes swing instantly up to you. You expect them to be angry, but they're just broken and empty. She shakes and a cough breaks her lips, sharp and sudden, expelling a puff of smoke. (set:$staffroom to 4)(set:$condemn to it+1)(set:$friend to 6)(set:$owner to 2)
+[[The coughing continues and smoke begins to fill the room|Staff Room]] </tw-passagedata><tw-passagedata pid="24" name="Forgive Staff Room" tags="" position="925,475" size="100,100">You move to crouch in front of her and put a hand over the phone just as it starts to vibrate again. 
+'You don't need to hold on to him from beyond the grave. Let yourself breathe.'
+You take the phone from her grasp and shut it off, properly silencing the device. Kelly draws in a deep, unsteady breath, and when she breathes out, it comes smoother. Her form flickers and fades and disappears.
+(set:$staffroom to 5)(set:$friend to 6)(set:$owner to 2)
+[[Leave her in peace|Staff Room]] </tw-passagedata><tw-passagedata pid="25" name="Bad End" tags="" position="50,600" size="100,100">The screen flickers again and an arm has emerged from the screen. In less than a second, the twitching limbs and contorting torso of Ellie's charred body has fully landed on the theatre floor. She starts to crawl toward you and you find your arms and wherever she moves, fires spark up in her wake. It catches on the carpet, then grows across the seats and the curtains along the walls.
+You have the thought that you should be moving, but your legs are too heavy. You wonder if you would even want to if you could. She screams at you, her words impossible to make out. The flames curl toward you and your own screams of agony mingle with your girlfriend's. You skin bubbles and melts, your bones liquifying with the heat of the inferno. 
+The theatre burns down once more. This time, you are trapped in the inferno with your beloved partner. As she reaches you, you begin to black out, but not before the melting visage of Ellie curls herself around you, frying vocal chords making what strained noises they still can.
+In the brief moments as your life comes to an end, you see the screen, curling and bubbling as it burns from the outside in, showing you failing to scrabble through the durt and plasterboard that blocked you from Ellie. (set:$run to it+1)
+[[How long will you hold on to this blame?|Landing]]</tw-passagedata><tw-passagedata pid="26" name="Good End" tags="" position="50,700" size="100,100">A smoky veneer over the movie slightly obscures the retelling of your relationship. Your first date rushes by, pausing quickly with the first kiss you shared at the end of the afternoon. Shadows swish and days and weeks go by as the haze begins to settle heavier. A flare of passion during your first night together. You share the popcorn that sits between you and laugh at how clumsy the early days of your relationship was. It gets more serious as time goes by. You're meeting her family, desperately hoping that her younger siblings will think you're cool. She meets your family, and you know without a doubt that your mother will instantly love her. 
+Years of domestic life move by, years of daily interactions, shared moments, over-used jokes and hyper-niche references. Tears well up as the emotion becomes too much. A soft, cooing shush from Ellie finally brings your eyes down to her face. Tears are streaked down her cheeks like yours, and she reaches up to gently take a hold of your face.
+You don't watch the screen as it moves to the fire. You and Ellie are on opposite sides of the rubble. Your screams mirror each other, but the soundproofing keeps you from hearing as she sobs with her last breaths that it's okay.
+In your arms, she repeats it for you in a shuddering, whispered voice.
+'It's going to be okay. I love you. I'll always love you.' The screen fades into smoke, and the hum of the projector goes silent. You and Ellie are alone in the dark, crying in each others' arms.
+'I forgive you. But you have to forgive yourself. Please, forgive yourself.'
+As the lights come up, the ghost fades slowly out of your grasp.</tw-passagedata><tw-passagedata pid="27" name="Your hands" tags="" position="425,25" size="100,100">He must have mistaken you for somebody else. Your hands are fine.
+(click-replace: "fine.")[burning.](click-replace: "burning.")[boiling.](click-replace: "boiling.")[mangled.](click-replace: "mangled.")[bandaged. Bandaged and numb.
+
+Support beams have fallen and blocked a door. They're catching fire as you desperately try to lift them. Smoke fills your lungs with every huffed breath. It makes your arms heavy. Tired. Weak. 
+
+You shake the vision away and stumble back from the paramedic.
+[[You're done here|Street]]]</tw-passagedata><tw-passagedata pid="28" name="Lobbydecision" tags="" position="175,550" size="100,100">[[He wasn't strong enough. He should have been able to help you.|Condemn Lobby]]
+(if:$run is 0)[(t8n-delay:10s)+(t8n:"dissolve")[[[He tried for as long as he could. He was as brave as anybody.|Forgive Lobby]]]]\
+(else-if:$run is 1)[(t8n-delay:5s)+(t8n:"dissolve")[[[He tried for as long as he could. He was as brave as anybody.|Forgive Lobby]]]]\
+(else:)[[[He tried for as long as he could. He was as brave as anybody.|Forgive Lobby]]]</tw-passagedata><tw-passagedata pid="29" name="Street Decision" tags="" position="750,150" size="100,100">[[His vodka fuelled the fire, helped it grow until it consumed the cinema. He's an idiot.|Condemn Street]]
+(if:$run is 0)[(t8n-delay:10s)+(t8n:"dissolve")[[[He made a mistake. A dumb one, but he was trying to make himself better.|Forgive Street]]]]\
+(else-if:$run is 1)[(t8n-delay:5s)+(t8n:"dissolve")[[[He made a mistake. A dumb one, but he was trying to make himself better.|Forgive Street]]]]\
+(else:)[[[He made a mistake. A dumb one, but he was trying to make himself better.|Forgive Street]]]</tw-passagedata><tw-passagedata pid="30" name="Staffroom Decision" tags="" position="925,600" size="100,100">[[She had a job to do. She had a responsibility to everybody in the building. And she failed.|Condemn Staff Room]]
+(if:$run is 0)[(t8n-delay:10s)+(t8n:"dissolve")[[She was being driven crazy. Things just got lost in the stress of her personal crisis.|Forgive Staff Room]]]\
+(if:$run is 1)[(t8n-delay:5s)+(t8n:"dissolve")[[She was being driven crazy. Things just got lost in the stress of her personal crisis.|Forgive Staff Room]]]\
+(else:0[[[She was being driven crazy. Things just got lost in the stress of her personal crisis.|Forgive Staff Room]]]</tw-passagedata></tw-storydata>
+
+
+
+
+</body></html>
